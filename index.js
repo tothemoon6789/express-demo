@@ -1,5 +1,10 @@
-const http = require('http')
-http.createServer((req,res) => {
-    res.write('Setup bang nodejs, module http') 
-    res.end()
-}).listen(6060)
+const express = require("express")
+const app = express()
+const port = 3000
+app.get('/',function (req,res) {
+    res.send(('Hello wolrd, anh em nhes'))
+    
+})
+app.listen(port,() => {
+    console.log(`expamle app listening on port ${port}`) 
+})
